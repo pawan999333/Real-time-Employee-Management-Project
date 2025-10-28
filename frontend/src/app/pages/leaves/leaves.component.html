@@ -1,0 +1,49 @@
+<div class="pt-5">
+    <div class="row">
+        <div class="col-12 d-flex align-items-center pb-4 pt-4">
+            <h2 class="mb-0">Leaves</h2>
+            <button color="primary" mat-raised-button class="ml-2" *ngIf="user.role=='emp'"
+                (click)="openDialog(user)"><mat-icon>add</mat-icon>Add Leave</button>
+            <mat-icon (click)="exportExcel()" class="ml-2" color="primary"
+                matTooltip="Click to export">download</mat-icon>
+
+        </div>
+        <div class="col-12 table-responsive">
+            <table id="leaves-list">
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Employee Name</th>
+                    <th>Leave Type</th>
+                    <th>Reason</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Action</th>
+                </tr>
+                <tr *ngFor="let item of leavesData; let i=index;">
+                    <td>{{item.empId}}</td>
+                    <td>{{item?.empName}}</td>
+                    <td>{{item?.leaveType}}</td>
+                    <td>{{item?.reason}}</td>
+                    <td>{{item?.startDate | date:'dd-MM-yyyy'}} </td>
+                    <td>{{item?.endDate | date:'dd-MM-yyyy'}} </td>
+                    <td>
+                        <span *ngIf="item?.result=='Pending' && user?.role=='emp'"
+                            style="color: #3f51b5;font-weight: 500;">Pending</span>
+                        <span *ngIf="item?.result=='Approve'" style="color: green;font-weight: 500;">Approve</span>
+                        <span *ngIf="item?.result=='Reject'" style="color: red;font-weight: 500;">Reject</span>
+
+
+                        <mat-icon matTooltip="Approve Leave" *ngIf="item?.result=='Pending' && user?.role=='admin'"
+                            style="color:green" (click)="updateLeave(item,'Approve')">check_circle</mat-icon>
+                        <mat-icon matTooltip="Reject Leave" *ngIf="item?.result=='Pending' && user?.role=='admin'"
+                            style="color:red" (click)="updateLeave(item,'Reject')">cancel</mat-icon>
+                    </td>
+
+
+
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

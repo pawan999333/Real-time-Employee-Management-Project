@@ -1,0 +1,6 @@
+.clickable {
+  color: #3f51b5;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}

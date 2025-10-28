@@ -1,0 +1,42 @@
+<div mat-dialog-title class="d-flex justify-content-between mt-0 mb-0">
+
+    <h2>Add Leave</h2>
+
+    <mat-icon mat-dialog-close>close</mat-icon>
+</div>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="leaveForm" (ngSubmit)="addLeave()">
+         <mat-form-field appearance="outline" class="col-6 pl-0 ">
+            <mat-label>Start Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="startDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="col-6  pr-0">
+            <mat-label>End Date</mat-label>
+            <input matInput [matDatepicker]="endDatePicker" formControlName="endDate">
+            <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #endDatePicker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-12 pl-0 pr-0">
+            <mat-select placeholder="Select Option" formControlName="leaveType">
+                <mat-option value="Sick Leave">Sick Leave</mat-option>
+                <mat-option value="Casual Leave">Casual Leave</mat-option>
+                <mat-option value="Earned Leave">Earned Leave</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+
+       
+        <mat-form-field appearance="outline" class="col-12 pl-0 pr-0">
+
+            <mat-label>Reason</mat-label>
+            <textarea rows="2" type="text" matInput formControlName="reason">
+        </textarea>
+        </mat-form-field>
+        <div class="pt-4">
+            <button mat-raised-button color="primary" class="col">Submit</button>
+        </div>
+    </form>
+</mat-dialog-content>

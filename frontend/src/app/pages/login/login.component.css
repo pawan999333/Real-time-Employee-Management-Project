@@ -1,0 +1,12 @@
+@media (min-width: 768px) {
+    .loginDiv {
+        width: 360px;
+    }
+}
+
+.login-container {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

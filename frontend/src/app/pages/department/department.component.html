@@ -1,0 +1,23 @@
+
+<div mat-dialog-title class="d-flex justify-content-between mt-0 mb-0">
+
+    <h2 *ngIf="!data">Add Department</h2>
+        <h2 *ngIf="data && data.departmentName">Update Department</h2>
+
+    <mat-icon mat-dialog-close>close</mat-icon>
+</div>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="departmentForm" (ngSubmit)="addDepartment()">
+        <mat-form-field appearance="outline" class="col-12 pl-0 pr-0">
+            <mat-label>Department Name</mat-label>
+            <input type="text" matInput placeholder="Enter Department" formControlName="departmentName">
+
+        </mat-form-field>
+        <div *ngIf="getDepartmentName && getDepartmentName.invalid && getDepartmentName.touched">
+            <small class="errorCss">Department Name is Required</small>
+        </div>
+        <div class="pt-4">
+            <button mat-raised-button color="primary" class="col">Submit</button>
+        </div>
+    </form>
+</mat-dialog-content>

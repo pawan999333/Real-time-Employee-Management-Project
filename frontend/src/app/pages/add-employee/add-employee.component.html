@@ -1,0 +1,85 @@
+<div class="container pt-5">
+    <div class="row">
+        <div class="col text-center p-3">
+              <h2 mat-dialog-title *ngIf="!data">Add Employee</h2>
+    <h2 *ngIf="data && data.departmentName">Update Employee</h2>
+
+      <form [formGroup]="empForm" class="row" (ngSubmit)="addEmployee()">
+        <mat-form-field appearance="outline" class="col-6 pr-2">
+            <mat-label>Employee Name</mat-label>
+            <input type="text" matInput formControlName="empName">
+
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-6 pl-0">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email">
+
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-6 pr-2">
+            <mat-label>Phone</mat-label>
+            <input type="text" matInput formControlName="phone">
+
+        </mat-form-field>
+        <!-- <mat-form-field appearance="outline" class="col-6 pl-0 pr-0">
+            <mat-label>Joining Date</mat-label>
+            <input type="date" matInput formControlName="joiningDate">
+
+        </mat-form-field> -->
+        <mat-form-field appearance="outline" class="col-6  pl-0">
+            <mat-label>Joining Date</mat-label>
+            <input matInput [matDatepicker]="joiningPicker" formControlName="joiningDate">
+            <mat-datepicker-toggle matSuffix [for]="joiningPicker"></mat-datepicker-toggle>
+            <mat-datepicker #joiningPicker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="col-6 pr-2">
+            <mat-label>Departments</mat-label>
+            <mat-select formControlName="departmentId">
+                <mat-option [value]="dept.id" *ngFor="let dept of departmentData">{{dept?.departmentName}}</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+
+
+        <mat-radio-group formControlName="gender" class="col-6 d-flex align-items-center pb-4">
+            <mat-radio-button value="Male" class="pr-2">M</mat-radio-button>
+            <mat-radio-button value="Female">F</mat-radio-button>
+        </mat-radio-group>
+
+  <mat-form-field appearance="outline" class="col-6 pr-2">
+            <mat-label>Salery</mat-label>
+            <input type="text" matInput formControlName="salery">
+
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" class="col-6 pl-0 ">
+            <mat-label>Job Title</mat-label>
+            <mat-select formControlName="jobTitle">
+                <mat-option value="Software Engineer">{{'Software Engineer'}}</mat-option>
+                <mat-option value="Product Manager">{{'Product Manager'}}</mat-option>
+                <mat-option value="SalesForce Developer">{{'SalesForce Developer'}}</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-6 pr-2 ">
+            <mat-label>Last Working Date</mat-label>
+            <input matInput [matDatepicker]="lastPicker" formControlName="lastWorkingDate">
+            <mat-datepicker-toggle matSuffix [for]="lastPicker"></mat-datepicker-toggle>
+            <mat-datepicker #lastPicker></mat-datepicker>
+        </mat-form-field>
+            <mat-form-field appearance="outline" class="col-6 pl-0">
+            <mat-label>Date Of Birth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      
+
+        <div class="text-center col">
+      <button mat-raised-button color="primary" type="submit" 
+        [disabled]="empForm.invalid" class="col-4">Submit</button>
+</div>
+    </form>
+</div>
+    </div>
+</div>

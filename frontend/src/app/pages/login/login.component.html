@@ -1,0 +1,32 @@
+<div class="login-container">
+    <!-- <div class=" text-center"> -->
+         
+        <div class=" p-4 loginDiv" style="border-radius: 10px;background-color: #ffffff;">
+           <small class="d-block text-left font-weight-bold">Admin Credentials:</small>
+                <small class="d-block text-left">email: <b>emsbackend.mailer@gmail.com</b></small>
+                  <small class="d-block text-left">password: <b>12345</b></small>
+           
+            <h2 class="font-weight-bold d-flex align-items-center justify-content-center pt-4">
+                <mat-icon>person</mat-icon>Employee Management</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <mat-form-field appearance="outline" class="col-12 pl-0 pr-0">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput formControlName="email">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="col-12 pl-0 pr-0">
+                    <mat-label>Password</mat-label>
+                    <input type="text" matInput formControlName="passwordHash">
+                </mat-form-field>
+
+                <!-- <h4 class="text-right" style="color: #3f51b5; text-decoration: underline;font-weight: bold;"
+                (click)="addUser()">Create Account</h4> -->
+
+                <button mat-raised-button color="primary" type="submit" class="col">Login</button>
+            </form>
+            <div class="pt-2">
+               
+               <small class="d-block text-center pt-2">*All users share the default password: <b>12345</b></small>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
