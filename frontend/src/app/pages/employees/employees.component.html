@@ -7,8 +7,9 @@
 
                 <mat-icon (click)="exportExcel()" class="ml-2" color="primary" matTooltip="Click to export">download</mat-icon>
         </div>
-        <div class="col-12">
-            <table id="employee-list">
+        <div class="col-12 table-responsive">
+            <!-- <div class="table-responsive"> -->
+            <table id="employee-list" class="responsive-table">
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
@@ -45,6 +46,7 @@
                     </td>
                 </tr>
             </table>
+            <!-- </div> -->
         </div>
     </div>
 </div>

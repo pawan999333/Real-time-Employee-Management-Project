@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\Employee-Management-System\\emsbackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{241BDCF3-A506-44AD-A4EF-6376C9736D91}|emsbackend\\emsbackend.csproj|c:\\users\\hp\\desktop\\employee-management-system\\emsbackend\\emsbackend\\controllers\\mastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{241BDCF3-A506-44AD-A4EF-6376C9736D91}|emsbackend\\emsbackend.csproj|solutionrelative:emsbackend\\controllers\\mastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{241BDCF3-A506-44AD-A4EF-6376C9736D91}|emsbackend\\emsbackend.csproj|c:\\users\\hp\\desktop\\employee-management-system\\emsbackend\\emsbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{241BDCF3-A506-44AD-A4EF-6376C9736D91}|emsbackend\\emsbackend.csproj|solutionrelative:emsbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{241BDCF3-A506-44AD-A4EF-6376C9736D91}|emsbackend\\emsbackend.csproj|c:\\users\\hp\\desktop\\employee-management-system\\emsbackend\\emsbackend\\controllers\\mastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{241BDCF3-A506-44AD-A4EF-6376C9736D91}|emsbackend\\emsbackend.csproj|solutionrelative:emsbackend\\controllers\\mastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{241BDCF3-A506-44AD-A4EF-6376C9736D91}|emsbackend\\emsbackend.csproj|c:\\users\\hp\\desktop\\employee-management-system\\emsbackend\\emsbackend\\service\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -82,8 +82,7 @@
               "RelativeToolTip": "emsbackend\\Program.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAYwBAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:33:26.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T05:33:26.587Z"
             },
             {
               "$type": "Document",
@@ -95,8 +94,7 @@
               "RelativeToolTip": "emsbackend\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T05:20:44.559Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T05:20:44.559Z"
             },
             {
               "$type": "Document",
@@ -108,8 +106,7 @@
               "RelativeToolTip": "emsbackend\\helper\\EmailSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:17:35.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T05:17:35.223Z"
             },
             {
               "$type": "Document",
@@ -125,16 +122,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MasterController.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Desktop\\Employee-Management-System\\emsbackend\\emsbackend\\Controllers\\MasterController.cs",
               "RelativeDocumentMoniker": "emsbackend\\Controllers\\MasterController.cs",
               "ToolTip": "C:\\Users\\hp\\Desktop\\Employee-Management-System\\emsbackend\\emsbackend\\Controllers\\MasterController.cs",
               "RelativeToolTip": "emsbackend\\Controllers\\MasterController.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAAALwAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAALUAAAAAAAAAAAAAAL0AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T16:19:56.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-17T16:19:56.858Z"
             },
             {
               "$type": "Document",
@@ -146,18 +142,17 @@
               "RelativeToolTip": "emsbackend\\Service\\EmailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T07:29:16.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T07:29:16.503Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\hp\\Desktop\\Employee-Management-System\\emsbackend\\emsbackend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "emsbackend\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\hp\\Desktop\\Employee-Management-System\\emsbackend\\emsbackend\\Controllers\\AuthController.cs",
               "RelativeToolTip": "emsbackend\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAAAADoAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAN8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T07:49:55.656Z",
               "EditorCaption": ""
@@ -172,8 +167,7 @@
               "RelativeToolTip": "emsbackend\\Service\\IEmailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T07:29:07.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T07:29:07.046Z"
             },
             {
               "$type": "Document",
@@ -185,8 +179,7 @@
               "RelativeToolTip": "emsbackend\\Models\\DepartmentDetailsDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T18:41:25.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T18:41:25.638Z"
             },
             {
               "$type": "Document",

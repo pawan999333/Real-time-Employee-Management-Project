@@ -52,3 +52,4 @@ C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\obj\Debug\n
 C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
 C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Debug\net9.0\MailKit.dll
 C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Debug\net9.0\MimeKit.dll
+C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\obj\Debug\net9.0\emsbackend.sourcelink.json

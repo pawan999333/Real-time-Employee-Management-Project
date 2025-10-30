@@ -28,6 +28,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { CustomInterceptor } from './services/custom.interceptor';
 import { AttendanceComponent } from './pages/attendance/attendance.component';
 import { AddLeaveComponent } from './pages/add-leave/add-leave.component';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,11 @@ import { AddLeaveComponent } from './pages/add-leave/add-leave.component';
     MatDatepickerModule,
     MatNativeDateModule,
     NgChartsModule,
-    MatTooltipModule 
+    MatTooltipModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground:true,
+    })
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass:CustomInterceptor,multi:true}],
   bootstrap: [AppComponent]
