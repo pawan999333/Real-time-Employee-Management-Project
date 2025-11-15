@@ -52,3 +52,11 @@ C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Release
 C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Release\net9.0\BouncyCastle.Cryptography.dll
 C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Release\net9.0\MailKit.dll
 C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Release\net9.0\MimeKit.dll
+C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Release\net9.0\PdfSharpCore.dll
+C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Release\net9.0\HtmlRenderer.Core.dll
+C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Release\net9.0\HtmlRenderer.PdfSharp.Core.dll
+C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Release\net9.0\SixLabors.Core.dll
+C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Release\net9.0\SixLabors.Fonts.dll
+C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Release\net9.0\SixLabors.ImageSharp.dll
+C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\bin\Release\net9.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\hp\Desktop\Employee-Management-System\emsbackend\emsbackend\obj\Release\net9.0\emsbackend.sourcelink.json

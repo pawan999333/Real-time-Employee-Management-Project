@@ -21,7 +21,7 @@
                     <th>Joining Date</th>
                     <th>Phone</th>
                     <th>Last Working Date</th>
-                    <th>Salery</th>
+                    <th *ngIf="user.role=='admin'">Salery</th>
                     <th *ngIf="user.role=='admin'">Action</th>
                 </tr>
                 <tr *ngFor="let emp of employeesData; let i=index;">
@@ -38,11 +38,13 @@
                     <td>{{emp.phone}}</td>
                     <td>{{emp.lastWorkingDate | date: 'dd-MM-yyyy' }}</td>
 
-                    <td>{{emp.salery}}</td>
+                    <td *ngIf="user.role=='admin'">{{emp.salery}}</td>
                     <td *ngIf="user.role=='admin'">
                         <mat-icon color="primary" (click)="openDialog(emp)"
                          *ngIf="emp.role=='emp'">edit</mat-icon>
                         <mat-icon *ngIf="emp.role=='emp'" color="warn" (click)="deleteEmployee(emp.id)">delete</mat-icon>
+                        <mat-icon *ngIf="emp.role=='emp'" style="color: green;" (click)="viewSalery(emp.id)">currency_rupee</mat-icon>
+
                     </td>
                 </tr>
             </table>

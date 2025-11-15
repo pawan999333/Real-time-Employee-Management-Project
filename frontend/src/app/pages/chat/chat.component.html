@@ -1,0 +1,27 @@
+<div class="pt-5">
+    <div class="row mt-4">
+        <div class="col-12  table-responsive" >
+            <!-- <div class="table-responsive"> -->
+            <table id="chat-list" class="responsive-table col-sm-12 col-lg-4 col-md-4 ">
+                <tr>
+                    <th class="chatRows">Name</th>
+                    <th class="chatRows">Chat</th>
+
+                </tr>
+                <tr *ngFor="let emp of employessList; let i=index;">
+                    <td class="chatRows">{{emp.empName}}</td>
+                    <td class="chatRows"><mat-icon (click)="startChat(emp)">chat</mat-icon></td>
+
+
+                </tr>
+            </table>
+            <!-- </div> -->
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+

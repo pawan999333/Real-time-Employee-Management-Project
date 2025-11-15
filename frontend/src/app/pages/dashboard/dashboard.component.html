@@ -23,7 +23,7 @@
 
 </mat-card>
         </div>
-    <div class="p-2 col-lg-6 col-12" *ngIf="userDetails.role=='admin'">
+    <div class="p-2 col-lg-6 col-12" >
     <mat-card class="example-card text-center" style="background-color: #a500ff59;">
   <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
   <mat-card-content>
@@ -38,7 +38,7 @@
 
 </mat-card>
 </div>
-   <div class="p-2 col-lg-6 col-12" *ngIf="userDetails.role=='emp'">
+   <div class="p-2 col-lg-6 col-12" *ngIf="userDetails.role=='emp' && (currentDate.getDay() !=0)">
     <mat-card class="example-card text-center" style="background-color: #a500ff59;">
   <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
   <mat-card-content>
@@ -46,7 +46,8 @@
     font-weight: 500;" >Mark Attendance</p>
      <p  class="font-weight-bold buttonCss d-flex align-items-center justify-content-center" style="cursor: pointer;">  
         <span style="text-decoration: underline;"
-        (click)="markAttendace()">Mark Present Today</span>
+        (click)="markAttendace()"
+       >Mark Present Today</span>
   <!-- <mat-icon>arrow_forward</mat-icon> -->
     </p>
   </mat-card-content>

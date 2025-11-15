@@ -1,8 +1,4 @@
-@media(min-width:768px){
- .navbar-brand{
-  /* padding-left: 1rem; */
-}
-}
+
 .bg-dark {
     background-color: #3f51b5 !important;
 }

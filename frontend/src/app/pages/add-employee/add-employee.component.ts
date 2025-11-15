@@ -67,7 +67,7 @@ export class AddEmployeeComponent implements OnInit {
             if (res?.message) {
               console.log(res.message);
               this.toastr.success(res.message);
-              this.router.navigateByUrl('/employees')
+              this.router.navigateByUrl('/pages/employees')
             } else {
               this.toastr.error("Invalid Data");
             }
@@ -91,7 +91,7 @@ export class AddEmployeeComponent implements OnInit {
                   next: (res: any) => {
                     if (res?.message) {  
                       this.toastr.success(res.message);                   
-                      this.router.navigateByUrl('/employees')
+                      this.router.navigateByUrl('/pages/employees')
 
                     } else {
                       this.toastr.error("Invalid Data");

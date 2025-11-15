@@ -5,25 +5,31 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand headerCss" href="#">Employee Management</a>
+  <a class="navbar-brand headerCss" href="#">EmploySync Connect</a>
 
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': !isNavbarCollapsed }">
     <ul class="navbar-nav mr-auto pl-3">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/dashboard" (click)="closeNavbar()">Dashboard</a>
+        <a class="nav-link" routerLink="/pages/dashboard" (click)="closeNavbar()">Dashboard</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/departments" (click)="closeNavbar()">Departments</a>
+        <a class="nav-link" routerLink="/pages/departments" (click)="closeNavbar()">Departments</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/employees" (click)="closeNavbar()">Employee List</a>
+        <a class="nav-link" routerLink="/pages/employees" (click)="closeNavbar()">Employee List</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/leaves" (click)="closeNavbar()">Leaves</a>
+        <a class="nav-link" routerLink="/pages/leaves" (click)="closeNavbar()">Leaves</a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" routerLink="/attendance" (click)="closeNavbar()">Attendance</a>
+        <a class="nav-link" routerLink="/pages/attendance" (click)="closeNavbar()">Attendance</a>
       </li>
+        <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="/pages/salery" (click)="closeNavbar()">Salery</a>
+      </li> -->
+     <li class="nav-item">
+        <a class="nav-link" routerLink="/pages/chat" (click)="closeNavbar()">Chat</a>
+      </li> 
        <li class="nav-item">
         <a class="nav-link d-flex align-items-center"
         style="cursor: pointer;"  (click)="onLogout()"><mat-icon>logout</mat-icon>Logout</a>

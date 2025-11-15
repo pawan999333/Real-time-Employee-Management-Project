@@ -48,11 +48,11 @@ export class EmployeesComponent implements OnInit {
   }
   openDialog(data: any): void {
     if (data.id) {
-      this.router.navigateByUrl(`/add-employee?id=${data.id}`);
+      this.router.navigateByUrl(`/pages/add-employee?id=${data.id}`);
     }
     else {
 
-      this.router.navigateByUrl('/add-employee');
+      this.router.navigateByUrl('/pages/add-employee');
     }
 
 
@@ -100,5 +100,8 @@ export class EmployeesComponent implements OnInit {
 
 
 
+  }
+  viewSalery(emp:any){
+    this.router.navigateByUrl(`/pages/salery?empId=${emp}`)
   }
 }

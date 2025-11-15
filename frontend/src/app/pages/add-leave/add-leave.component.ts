@@ -16,8 +16,8 @@ export class AddLeaveComponent implements OnInit {
     empName: new FormControl('', [Validators.required]),
     leaveType: new FormControl('', [Validators.required]),
     reason: new FormControl(''),
-    startDate: new FormControl(null, [Validators.required]),
-    endDate: new FormControl(null)
+    startDate: new FormControl<string | null>(null, [Validators.required]),
+    endDate: new FormControl<string | null>(null)
   })
 
   constructor(private dialogRef: MatDialogRef<AddLeaveComponent>, private http: HttpClient,
@@ -38,6 +38,18 @@ export class AddLeaveComponent implements OnInit {
 
   addLeave() {
     console.warn(this.leaveForm.value);
+    const startDate = this.leaveForm.get('startDate')?.value;
+    const endDate = this.leaveForm.get('endDate')?.value;
+    if (startDate) {
+      const formattedStartDate = new Date(startDate).toLocaleDateString('en-CA');
+      this.leaveForm.patchValue({ startDate: formattedStartDate });
+    }
+    if (endDate) {
+      const formattedEndDate = new Date(endDate).toLocaleDateString('en-CA');
+      this.leaveForm.patchValue({ endDate: new Date(formattedEndDate).toLocaleDateString('en-CA') });
+    }
+
+
 
     this.http.post(`${this.baseUrl}/Leave/add-leaves`, this.leaveForm.value)
       .subscribe({

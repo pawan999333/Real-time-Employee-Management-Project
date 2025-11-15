@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('token', res.token);
           localStorage.setItem('user', JSON.stringify(res.user));
           this.toastr.success(res.message)
-          this.router.navigateByUrl('/dashboard');
+          this.router.navigateByUrl('/pages/dashboard');
         } else {
           this.toastr.error("Invalid Request")
         }
@@ -47,7 +47,8 @@ export class LoginComponent implements OnInit {
   }
   addUser(){
 
-      this.router.navigateByUrl('/add-employee');
+      this.router.navigateByUrl('/pages/add-employee');
     
   }
 }
+

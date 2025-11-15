@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  currentDate:Date=new Date();
   barChartOptions: ChartConfiguration['options'] = {
     responsive: true,
     scales: {
@@ -81,10 +82,10 @@ export class DashboardComponent implements OnInit {
 
   view(text: any) {
     if (text == 'emp') {
-      this.router.navigate(['employees'])
+      this.router.navigate(['pages/employees'])
     }
     if (text == 'dept') {
-      this.router.navigate(['departments'])
+      this.router.navigate(['pages/departments'])
     }
   }
   markAttendace(){
@@ -105,7 +106,7 @@ export class DashboardComponent implements OnInit {
     })
   }
   leavesList(){
-    this.router.navigateByUrl('/leaves');
+    this.router.navigateByUrl('pages/leaves');
   }
     getLeaves() {
     let empId = null;

@@ -1,0 +1,80 @@
+<div class="pt-5">
+    <div class="row">
+        <div class="col-12 d-flex  align-items-center pb-4 pt-4">
+            <h2 class="mb-0">Salary</h2>
+
+        </div>
+        <div>
+
+
+            <form [formGroup]="saleryFrm">
+                <mat-dialog-content class="mat-typography">
+                    <mat-form-field appearance="outline" class="col-md-4 col-6">
+                        <mat-label>Employee Id</mat-label>
+                        <input type="text" matInput formControlName="empId" readonly>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="col-md-4 col-6">
+                        <mat-label>Employee Name</mat-label>
+                        <input type="text" matInput readonly formControlName="empName">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="col-md-4 col-6">
+                        <mat-label>Select month</mat-label>
+                        <mat-select formControlName="month" class="form-select" placeholder="select">
+                            <mat-option value="01">January</mat-option>
+                            <mat-option value="02">February</mat-option>
+                            <mat-option value="03">March</mat-option>
+                            <mat-option value="04">April</mat-option>
+                            <mat-option value="05">May</mat-option>
+                            <mat-option value="06">June</mat-option>
+                            <mat-option value="07">July</mat-option>
+                            <mat-option value="08">August</mat-option>
+                            <mat-option value="09">September</mat-option>
+                            <mat-option value="10">October</mat-option>
+                            <mat-option value="11">November</mat-option>
+                            <mat-option value="12">December</mat-option>
+                        </mat-select>
+
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="col-md-4 col-6">
+                        <mat-label>Select year</mat-label>
+                        <mat-select formControlName="year" placeholder="Select year">
+                            <mat-option *ngFor="let year of years" [value]="year">{{ year }}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="col-md-4 col-6">
+                        <mat-label>Working Days</mat-label>
+                        <input type="number" matInput formControlName="workingDays">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="col-md-4 col-6">
+                        <mat-label>Attendance Days</mat-label>
+                        <input type="number" matInput formControlName="attendanceDays" readonly>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="col-md-4 col-6">
+                        <mat-label>Working Salery</mat-label>
+                        <input type="text" matInput formControlName="workingSalery">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="col-md-4 col-6">
+                        <mat-label>Provide Salery</mat-label>
+                        <input type="text" matInput readonly formControlName="provideSalery">
+                    </mat-form-field>
+
+
+                </mat-dialog-content>
+
+                <mat-dialog-actions>
+                    <div class="col-12 align-items-center d-flex justify-content-center">
+                        <button mat-raised-button color="primary" type="submit" (click)="getSalery()"
+                            [disabled]="saleryFrm.invalid">submit</button>
+
+                        <button mat-raised-button color="accent" matTooltip="Click to view" (click)="generateSalery(saleryFrm.value)" class="ml-2"
+                            *ngIf="downloadFlag">View</button>
+                        <button mat-raised-button style="color:red;" matTooltip="Click to download" (click)="downloadSalerySlip(saleryFrm.value)"
+                            class="ml-2" *ngIf="downloadFlag">Download</button>
+
+                    </div>
+                </mat-dialog-actions>
+            </form>
+        </div>
+    </div>
+</div>

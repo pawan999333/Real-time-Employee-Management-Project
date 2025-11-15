@@ -21,8 +21,19 @@ th, td {
   padding: 8px;
   text-align: left;
 }
-
+.chatRows{
+    border: none !important;
+}
 
 mat-icon{
     cursor: pointer;
+}
+
+
+.blue-text {
+  color: blue;
+}
+
+.red-text {
+  color: red !important;
 }

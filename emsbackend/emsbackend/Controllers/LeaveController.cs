@@ -45,10 +45,13 @@ namespace emsbackend.Controllers
 
 
                 connection.Open();
-                command.ExecuteNonQuery();
+                int rows = command.ExecuteNonQuery(); 
                 connection.Close();
 
-                return Ok(new { message = "Leaves applied successfully" });
+                if (rows > 0)
+                    return Ok(new { message = "Leave applied successfully" });
+                else
+                    return BadRequest(new { message = "Leave already applied or attendance exists" });
 
 
             }

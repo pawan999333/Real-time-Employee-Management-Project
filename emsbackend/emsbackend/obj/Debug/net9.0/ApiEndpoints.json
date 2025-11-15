@@ -96,6 +96,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "emsbackend.Controllers.ChatController",
+    "Method": "GetPrivateChat",
+    "RelativePath": "api/Chat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "emsbackend.Models.PrivateChatRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "emsbackend.Controllers.LeaveController",
     "Method": "AddLeaves",
     "RelativePath": "api/Leave/add-leaves",
@@ -244,23 +260,35 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "emsbackend.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
+    "ContainingType": "emsbackend.Controllers.PdfController",
+    "Method": "GeneratePDF",
+    "RelativePath": "api/Pdf/generate-pdf",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[emsbackend.WeatherForecast, emsbackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "dto",
+        "Type": "emsbackend.Models.GetSalaryDetailsDTO",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "emsbackend.Controllers.SaleryController",
+    "Method": "getSaleryDetails",
+    "RelativePath": "api/Salery",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "emsbackend.Models.SalaryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

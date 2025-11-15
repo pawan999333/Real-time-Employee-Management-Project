@@ -152,8 +152,8 @@ namespace emsbackend.Controllers
         }
 
 
-      
 
+        [Authorize]
         [HttpGet("Get-Employees")]
         public ActionResult GetEmployees(int? Id)
         {

@@ -1,4 +1,5 @@
 using emsbackend.helper;
+using emsbackend.Hubs;
 using emsbackend.Repositories;
 using emsbackend.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -13,10 +14,12 @@ namespace emsbackend
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddSignalR();
 
             // Add services to the container.
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSignalR();
             //builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
             //builder.Services.AddTransient<IEmailService, EmailService>();
             builder.Services.AddSwaggerGen(options =>
@@ -64,9 +67,13 @@ namespace emsbackend
             {
                 options.AddPolicy("AllowAll", policy =>
                 {
-                    policy.AllowAnyOrigin()
-                          .AllowAnyHeader()
-                          .AllowAnyMethod();
+                    policy
+                      .AllowAnyHeader()
+                      .AllowAnyMethod()
+                    .SetIsOriginAllowed(origin => true) 
+                   
+                        
+                    .AllowCredentials();
                 });
             });
 
@@ -76,9 +83,12 @@ namespace emsbackend
             app.UseSwagger();
             app.UseSwaggerUI();
 
-            app.UseHttpsRedirection();
 
+            app.UseHttpsRedirection();
             app.UseCors("AllowAll");
+
+            app.MapHub<ChatHub>("/api/chatHub");
+
 
             app.UseAuthentication();
             app.UseAuthorization();
