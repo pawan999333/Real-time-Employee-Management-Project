@@ -22,4 +22,7 @@ mat-card{
   .chartDiv{
     width: 285px;
   }
+  .parentDiv{
+    flex-direction: column;
+  }
 }

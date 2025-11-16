@@ -14,7 +14,7 @@ export class AppComponent {
   isNavbarCollapsed = true;
 
   constructor(public router: Router, private accService: AccountService, private meta: Meta, private title: Title) {
-    this.title.setTitle('EmploySync Connect | Employee Management System');
+    this.title.setTitle('EmploySync Connect');
 
     this.meta.addTags([
       {

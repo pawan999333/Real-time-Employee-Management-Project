@@ -1,8 +1,8 @@
-<div class="pt-5">
-    <div class="row mt-4">
+<div class="pt-5 pl-3 pr-3">
+  <div class="row">
 
 <div style="padding:10px;" class="col" >
-    <h3 class="font-weight-bold">💬 Start Chat</h3>
+    <h3 class="font-weight-bold pt-2">💬 Start Chat</h3>
     <div class="d-flex align-items-center">
     <!-- <input [(ngModel)]="userdata.empName" placeholder="Your name" class="form-control" style="max-width: 400px; "/><br> -->
    <mat-form-field appearance="outline" class="col-md-6 col-11 pl-0 pr-0">
@@ -13,12 +13,18 @@
     </div>
 
     <hr>
-   <div 
+    <div class="p-2 " style="border-radius: 10px;
+    background: #306aff80;">
+ <div 
   *ngFor="let msg of chatService.chatMessagesSubject$ | async; let i = index"
-  [ngClass]="{ 'text-left': msg.sender === userdata.empName, 'text-right': msg.sender !== userdata.empName }"
+  class="chat-message"
+  [ngClass]="{ 'left': msg.sender === userdata.empName, 'right': msg.sender !== userdata.empName }"
 >
-  <b [ngClass]="{ 'blue-text': msg.sender == userdata.empName, 'red-text': msg.sender != userdata.empName }">💬 {{ msg.sender }}:</b> {{ msg.message }}
+  <b [ngClass]="{ 'blue-text': msg.sender == userdata.empName, 'red-text': msg.sender != userdata.empName }">💬 {{ msg.sender }}:</b>
+  <span class="message-text">{{ msg.message }}</span>
 </div>
+</div>
+
 
 </div>
     </div>
