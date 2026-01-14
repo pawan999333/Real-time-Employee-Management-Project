@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://employ-sync-connect.netlify.app/sitemap.xml

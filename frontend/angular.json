@@ -155,7 +155,13 @@
           "builder": "@nguniversal/builders:prerender",
           "options": {
             "routes": [
-              "/"
+              "/",
+              "/pages/dashboard",
+              "/pages/employees",
+              "/pages/leaves",
+              "/pages/attendance",
+              "/pages/departments",
+              "/pages/chat"
             ]
           },
           "configurations": {
