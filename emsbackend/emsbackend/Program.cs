@@ -1,5 +1,6 @@
 using emsbackend.helper;
 using emsbackend.Hubs;
+using emsbackend.Middleware;
 using emsbackend.Repositories;
 using emsbackend.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -85,6 +86,7 @@ namespace emsbackend
 
 
             app.UseHttpsRedirection();
+            app.UseLogging("log.txt");
             app.UseCors("AllowAll");
 
             app.MapHub<ChatHub>("/api/chatHub");
