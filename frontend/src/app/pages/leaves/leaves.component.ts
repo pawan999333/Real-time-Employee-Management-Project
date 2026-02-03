@@ -7,6 +7,7 @@ import { ToastrService } from 'ngx-toastr';
 import { AddLeaveComponent } from '../add-leave/add-leave.component';
 import { subscribe } from 'diagnostics_channel';
 import * as XLSX from 'xlsx';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-leaves',
@@ -20,10 +21,14 @@ export class LeavesComponent implements OnInit {
     fileName: string = "LeavesDetails.xlsx";
 
 
-  constructor(public dialog: MatDialog, private http: HttpClient, private toastr: ToastrService
+  constructor(public dialog: MatDialog, private http: HttpClient, private toastr: ToastrService,
+    private seoService: SeoService
   ) { }
 
   ngOnInit(): void {
+    // Apply SEO for leaves page
+    this.seoService.applyPageSeo('leaves');
+    
     const userData = localStorage.getItem('user');
     this.user = userData ? JSON.parse(userData) : null;
     this.getLeaves();

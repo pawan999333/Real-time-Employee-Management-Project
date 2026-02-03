@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AccountService } from 'src/app/services/account.service';
 import { environment } from 'src/environments/environment.prod';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-login',
@@ -19,10 +20,12 @@ export class LoginComponent implements OnInit {
     passwordHash: new FormControl('', [Validators.required])
   })
   constructor(private http: HttpClient, private toastr: ToastrService, private accService: AccountService,
-    private router: Router
+    private router: Router, private seoService: SeoService
   ) { }
 
   ngOnInit(): void {
+    // Apply SEO for login page
+    this.seoService.applyPageSeo('login');
   }
 
   onLogin() {

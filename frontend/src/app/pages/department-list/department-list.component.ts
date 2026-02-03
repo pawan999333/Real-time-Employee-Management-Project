@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
 import { ToastrService } from 'ngx-toastr';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-department-list',
@@ -15,10 +16,14 @@ export class DepartmentListComponent implements OnInit {
   departmentData: any[]=[];
   user:any;
 
-  constructor(public dialog: MatDialog, private http : HttpClient, private toastr: ToastrService
+  constructor(public dialog: MatDialog, private http : HttpClient, private toastr: ToastrService,
+    private seoService: SeoService
   ) { }
 
   ngOnInit(): void {
+    // Apply SEO for departments page
+    this.seoService.applyPageSeo('departments');
+    
     const userData = localStorage.getItem('user');
     this.user = userData ? JSON.parse(userData) : null;
     this.getDepartments();

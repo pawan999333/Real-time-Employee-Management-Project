@@ -1,4 +1,27 @@
+# EmploySync Connect Robots.txt
+# https://employ-sync-connect.netlify.app
+
 User-agent: *
 Allow: /
+Allow: /login
+Allow: /pages/
 
+# Disallow private assets and API endpoints
+Disallow: /assets/private/
+Disallow: /api/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://employ-sync-connect.netlify.app/sitemap.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

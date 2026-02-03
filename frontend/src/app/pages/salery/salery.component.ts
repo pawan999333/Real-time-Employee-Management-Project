@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { DownloadService } from 'src/app/services/download.service';
 import { environment } from 'src/environments/environment.prod';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-salery',
@@ -19,9 +20,12 @@ export class SaleryComponent implements OnInit {
   baseUrl = environment.apiUrl;
   downloadFlag: boolean=false;
   constructor(private downloadService: DownloadService, private http: HttpClient, private toastr: ToastrService,
-    private router: Router, private activateRoute: ActivatedRoute) { }
+    private router: Router, private activateRoute: ActivatedRoute, private seoService: SeoService) { }
 
   ngOnInit(): void {
+    // Apply SEO for salary page
+    this.seoService.applyPageSeo('salery');
+    
     this.saleryFrm = new FormGroup({
       empId: new FormControl(''),
       empName: new FormControl(''),

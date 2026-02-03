@@ -6,6 +6,7 @@ import { EmployeesService } from 'src/app/services/employees.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GetChatService } from 'src/app/services/get-chat.service';
 import { map } from 'rxjs';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-chat',
@@ -21,10 +22,14 @@ export class ChatComponent implements OnInit {
   empId:any;
   employessList:any[]=[]
   constructor(public chatService: ChatService, private http: HttpClient, public employeeService:EmployeesService,
-    private router:Router, private activateRoute:ActivatedRoute, public getChatService:GetChatService
+    private router:Router, private activateRoute:ActivatedRoute, public getChatService:GetChatService,
+    private seoService: SeoService
   ) { }
 
   ngOnInit() {
+    // Apply SEO for chat page
+    this.seoService.applyPageSeo('chat');
+    
     this.chatService.startConnection();
     this.employeeService.getEmployees();
    this.employeeService.employeeData$

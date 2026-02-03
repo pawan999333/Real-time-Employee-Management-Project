@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Title, Meta } from '@angular/platform-browser';
 import { ChartConfiguration } from 'chart.js';
 import { ToastrService } from 'ngx-toastr';
 import { environment } from 'src/environments/environment.prod';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -34,23 +34,18 @@ export class DashboardComponent implements OnInit {
   userDetails: any;
   leavesData: any[] = [];
 
-  constructor(private http: HttpClient, private toastr: ToastrService, private router: Router, private title: Title, private meta: Meta) { }
+  constructor(private http: HttpClient, private toastr: ToastrService, private router: Router, 
+    private seoService: SeoService) { }
 
   ngOnInit(): void {
+    // Apply SEO for dashboard page
+    this.seoService.applyPageSeo('dashboard');
+    
     this.userDetails = JSON.parse(localStorage.getItem('user') || '{}');
     this.getEmployeeDepartmentwise();
     this.getDepartments();
     this.getEmployees();
     this.getLeaves();
-
-    // Set dynamic SEO meta tags
-    this.title.setTitle('Dashboard - EmploySync Connect | Employee Management System');
-    this.meta.updateTag({ name: 'description', content: 'Access your employee dashboard to manage attendance, leaves, departments, and more with EmploySync Connect.' });
-    this.meta.updateTag({ name: 'keywords', content: 'employee dashboard, attendance management, leave tracking, department overview, EmploySync Connect' });
-    this.meta.updateTag({ property: 'og:title', content: 'Dashboard - EmploySync Connect' });
-    this.meta.updateTag({ property: 'og:description', content: 'Manage your workforce efficiently with EmploySync Connect dashboard.' });
-    this.meta.updateTag({ property: 'og:url', content: 'https://employ-sync-connect.netlify.app/pages/dashboard' });
-    this.meta.updateTag({ name: 'canonical', content: 'https://employ-sync-connect.netlify.app/pages/dashboard' });
   }
   getDepartments() {
     this.http.get(`${this.baseUrl}/Master`).subscribe((res: any) => {

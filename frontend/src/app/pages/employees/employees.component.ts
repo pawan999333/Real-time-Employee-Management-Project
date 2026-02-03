@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment.prod';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import * as XLSX from 'xlsx';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-employees',
@@ -21,10 +22,13 @@ export class EmployeesComponent implements OnInit {
 
 
   constructor(public dialog: MatDialog, private http: HttpClient, private toastr: ToastrService,
-    private router: Router
+    private router: Router, private seoService: SeoService
   ) { }
 
   ngOnInit(): void {
+    // Apply SEO for employees page
+    this.seoService.applyPageSeo('employees');
+    
     const userData = localStorage.getItem('user');
     this.user = userData ? JSON.parse(userData) : null;
     this.getDepartments();

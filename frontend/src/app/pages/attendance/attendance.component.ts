@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
 import { ToastrService } from 'ngx-toastr';
 import * as XLSX from 'xlsx';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-attendance',
@@ -17,10 +18,14 @@ export class AttendanceComponent implements OnInit {
   attendanceData: any[] = [];
   fileName: string = "AttendanceDetails.xlsx";
 
-  constructor(public dialog: MatDialog, private http: HttpClient, private toastr: ToastrService
+  constructor(public dialog: MatDialog, private http: HttpClient, private toastr: ToastrService,
+    private seoService: SeoService
   ) { }
 
   ngOnInit(): void {
+    // Apply SEO for attendance page
+    this.seoService.applyPageSeo('attendance');
+    
     const userData = localStorage.getItem('user');
     this.user = userData ? JSON.parse(userData) : null;
     this.getAttendanceData();
