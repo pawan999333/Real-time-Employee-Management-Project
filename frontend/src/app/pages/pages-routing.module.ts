@@ -10,6 +10,7 @@ import { DepartmentListComponent } from './department-list/department-list.compo
 import { SaleryComponent } from './salery/salery.component';
 import { ChatComponent } from './chat/chat.component';
 import { AddChatComponent } from './add-chat/add-chat.component';
+import { VideoCallComponent } from './video-call/video-call.component';
 
 const routes: Routes = [
 
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'salery', canActivate: [AuthGuard], component: SaleryComponent },
   { path: 'chat', canActivate: [AuthGuard], component: ChatComponent },
   { path: 'add-chat', canActivate: [AuthGuard], component: AddChatComponent },
+  { path: 'video-call', canActivate: [AuthGuard], component: VideoCallComponent },
 
 
 

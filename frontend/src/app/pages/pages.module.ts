@@ -29,6 +29,7 @@ import { CustomInterceptor } from '../services/custom.interceptor';
 import { SaleryComponent } from './salery/salery.component';
 import { ChatComponent } from './chat/chat.component';
 import { AddChatComponent } from './add-chat/add-chat.component';
+import { VideoCallComponent } from './video-call/video-call.component';
 
 
 console.log("pages module load")
@@ -45,7 +46,8 @@ console.log("pages module load")
     AddLeaveComponent,
     SaleryComponent,
     ChatComponent,
-    AddChatComponent
+    AddChatComponent,
+    VideoCallComponent
   ],
   imports: [
     CommonModule,

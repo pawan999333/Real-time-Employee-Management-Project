@@ -1,0 +1,21 @@
+<div class="container-fluid" style="height: 85vh; padding-top: 20px;">
+    <div class="row mb-2">
+        <div class="col-12">
+            <div class="alert alert-info" role="alert">
+                <mat-icon style="vertical-align: middle; font-size: 20px;">info</mat-icon>
+                <strong>Note:</strong> We've updated the video server to improve connectivity. You should be able to
+                start meetings immediately without logging in.
+            </div>
+        </div>
+        <div class="col-12 text-right">
+            <button mat-raised-button color="primary" (click)="copyLink()">
+                <mat-icon>content_copy</mat-icon> Copy Meeting Link
+            </button>
+        </div>
+    </div>
+    <div class="row h-100">
+        <div class="col-12 h-100">
+            <div id="jitsi-iframe" style="width: 100%; height: 100%;"></div>
+        </div>
+    </div>
+</div>
