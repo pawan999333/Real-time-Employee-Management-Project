@@ -1,13 +1,16 @@
-<div class="login-container pl-3 pr-3" style="background: #d6451ebd
-;">
+<div class="login-container pl-3 pr-3">
     <!-- <div class=" text-center"> -->
 
-    <div class="p-4 loginDiv" style="border-radius: 10px;background-color: #ffffff;">
+    <div class="loginDiv" style="background-color: #ffffff;">
 
+        <div class="headerDiv p-2">
 
-        <h2 class="font-weight-bold d-flex align-items-center justify-content-center">
-            👥 StaffUnity 💬</h2>
-        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <h2 class="font-weight-bold p-3 d-flex align-items-center justify-content-center headerText"
+                style="color: #ffffff;">
+                🧑‍💻 StaffUnity</h2>
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="p-4">
             <mat-form-field appearance="outline" class="col-12 pl-0 pr-0">
                 <mat-label>Email</mat-label>
                 <input type="email" matInput formControlName="email">
@@ -20,9 +23,13 @@
             <!-- <h4 class="text-right" style="color: #3f51b5; text-decoration: underline;font-weight: bold;"
                 (click)="addUser()">Create Account</h4> -->
 
-            <button mat-raised-button color="primary" type="submit" class="col">Login</button>
+            <div class="d-flex pt-4">
+                <button mat-raised-button color="primary" type="submit" class="col mr-2">Login</button>
+                <button mat-raised-button color="warn" type="button" class="col" (click)="resetForm()">Cancel</button>
+            </div>
+
         </form>
-        <div class="pt-5">
+        <div class="pb-4">
 
             <small class="d-block text-center pt-2">*Admin email: <b>emsbackend.mailer@gmail.com</b></small>
             <small class="d-block text-center pt-2">*All users share the default password: <b>12345</b></small>

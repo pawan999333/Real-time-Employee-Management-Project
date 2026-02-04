@@ -53,5 +53,8 @@ export class LoginComponent implements OnInit {
       this.router.navigateByUrl('/pages/add-employee');
     
   }
+  resetForm(){
+    this.loginForm.reset();
+  }
 }
 

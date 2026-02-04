@@ -9,4 +9,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(180deg, #28518e, #3a73c7);
+}
+
+.headerDiv {
+    border-radius: 0 0 100% 100%;
+    background: linear-gradient(180deg, #0b5ed7, #0a4fb3);
+
+
+    height: clamp(90px, 16vh, 130px);
+
+
+
+
+
+
+
+}
+
+.headerText {
+    font-weight: 500 !important;
 }

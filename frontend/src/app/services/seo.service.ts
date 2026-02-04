@@ -138,9 +138,9 @@ export class SeoService {
    */
   setDefaultTags(): void {
     this.updateMetaTags({
-      title: 'StaffUnity - Free Employee Management System with Video Calling 2025',
-      description: 'StaffUnity - Free all-in-one employee management. Features: Video Calling, Screen Sharing, Attendance, Leaves, Salary Slips & Chat. Best free HR software.',
-      keywords: 'StaffUnity, video calling app, screen sharing for business, employee management system, free HR software, attendance tracking, leave management, employee portal, team video chat, online meetings, free employee management'
+      title: 'StaffUnity – Unified Digital Workspace for Modern Management',
+      description: 'StaffUnity unifies workforce management, real-time team conferencing, and collaborative chat into a single enterprise-ready ecosystem. Streamline your digital workspace today.',
+      keywords: 'StaffUnity, digital workspace, workforce collaboration, enterprise hub, integrated HR tools, video meetings, team chat, payroll automation'
     });
   }
 
