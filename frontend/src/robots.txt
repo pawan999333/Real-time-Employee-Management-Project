@@ -1,4 +1,4 @@
-# EmploySync Connect Robots.txt
+# StaffUnity Robots.txt
 # https://employ-sync-connect.netlify.app
 
 User-agent: *

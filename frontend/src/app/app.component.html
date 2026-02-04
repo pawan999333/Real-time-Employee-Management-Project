@@ -5,7 +5,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand headerCss" href="#">EmploySync Connect</a>
+  <a class="navbar-brand headerCss" routerLink="/pages/dashboard">StaffUnity</a>
 
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': !isNavbarCollapsed }">
     <ul class="navbar-nav mr-auto pl-3">
@@ -18,9 +18,11 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/pages/employees" (click)="closeNavbar()">Employee List</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/pages/leaves" (click)="closeNavbar()">Leaves</a>
-      </li>
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>Copyright &copy; StaffUnity 2025</span>
+        </div>
+      </div>
       <li class="nav-item">
         <a class="nav-link" routerLink="/pages/attendance" (click)="closeNavbar()">Attendance</a>
       </li>
@@ -30,9 +32,9 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/pages/chat" (click)="closeNavbar()">Chat</a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" routerLink="/pages/video-call" (click)="closeNavbar()">Video Call</a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a class="nav-link d-flex align-items-center" style="cursor: pointer;"
           (click)="onLogout()"><mat-icon>logout</mat-icon>Logout</a>

@@ -17,58 +17,58 @@ interface PageSeoConfig {
   providedIn: 'root'
 })
 export class SeoService {
-  private readonly siteName = 'EmploySync Connect';
-  private readonly defaultImage = 'https://employ-sync-connect.netlify.app/assets/EmploySyncConnect.png';
+  private readonly siteName = 'StaffUnity';
+  private readonly defaultImage = 'https://employ-sync-connect.netlify.app/assets/StaffUnity.png';
   private readonly baseUrl = 'https://employ-sync-connect.netlify.app';
 
   // Predefined SEO configurations for all pages
   private readonly pageConfigs: PageSeoConfig = {
     'dashboard': {
-      title: 'Dashboard - Employee Management System',
-      description: 'Access your employee dashboard to manage attendance, track leaves, view department stats, and monitor workforce metrics. Free HR dashboard for businesses.',
-      keywords: 'employee dashboard, HR dashboard, attendance management, leave tracking, department overview, workforce analytics, free HR software dashboard',
+      title: 'Dashboard - StaffUnity',
+      description: 'Access your StaffUnity dashboard to manage attendance, track leaves, view department stats, and monitor workforce metrics. Free HR dashboard for businesses.',
+      keywords: 'StaffUnity, employee dashboard, HR dashboard, attendance management, leave tracking, department overview, workforce analytics, free HR software dashboard',
       url: '/pages/dashboard'
     },
     'employees': {
-      title: 'Employee Directory - Staff Management Software',
-      description: 'Manage your complete employee directory with EmploySync Connect. Add, edit, view employee profiles, departments, and export employee data to Excel.',
-      keywords: 'employee directory, staff management, employee database, employee profiles, HR employee management, employee list software, staff directory',
+      title: 'Employee Directory - StaffUnity',
+      description: 'Manage your complete employee directory with StaffUnity. Add, edit, view employee profiles, departments, and export employee data to Excel.',
+      keywords: 'StaffUnity, employee directory, staff management, employee database, employee profiles, HR employee management, employee list software, staff directory',
       url: '/pages/employees'
     },
     'attendance': {
-      title: 'Attendance Tracker - Employee Attendance Management System',
-      description: 'Track employee attendance with our free attendance management system. One-click check-in, attendance reports, Excel export. Best attendance tracker for 2025.',
-      keywords: 'attendance tracker, employee attendance system, attendance management software, daily attendance, attendance report, free attendance tracker, clock in clock out',
+      title: 'Attendance Tracker - StaffUnity',
+      description: 'Track employee attendance with StaffUnity. One-click check-in, attendance reports, Excel export. Best attendance tracker for 2025.',
+      keywords: 'StaffUnity, attendance tracker, employee attendance system, attendance management software, daily attendance, attendance report, free attendance tracker, clock in clock out',
       url: '/pages/attendance'
     },
     'leaves': {
-      title: 'Leave Management System - PTO & Time Off Tracker',
-      description: 'Manage employee leave requests, approve PTO, track vacation days with our free leave management system. Streamline your HR leave approval workflow.',
-      keywords: 'leave management system, PTO tracker, time off management, vacation tracker, leave approval software, employee leave tracker, sick leave management, free PTO software',
+      title: 'Leave Management System - StaffUnity',
+      description: 'Manage employee leave requests, approve PTO, track vacation days with StaffUnity. Streamline your HR leave approval workflow.',
+      keywords: 'StaffUnity, leave management system, PTO tracker, time off management, vacation tracker, leave approval software, employee leave tracker, sick leave management, free PTO software',
       url: '/pages/leaves'
     },
     'departments': {
-      title: 'Department Management - Organizational Structure Software',
-      description: 'Organize your company departments with EmploySync Connect. Create, manage, and track department-wise employee distribution. Free department management tool.',
-      keywords: 'department management, organizational structure, team organization, department software, company departments, HR department management',
+      title: 'Department Management - StaffUnity',
+      description: 'Organize your company departments with StaffUnity. Create, manage, and track department-wise employee distribution. Free department management tool.',
+      keywords: 'StaffUnity, department management, organizational structure, team organization, department software, company departments, HR department management',
       url: '/pages/departments'
     },
     'salery': {
-      title: 'Salary Slip Generator - Free Payroll Calculator',
-      description: 'Generate professional salary slips and calculate payroll with EmploySync Connect. Download salary slips as PDF. Free payroll management for small businesses.',
-      keywords: 'salary slip generator, payroll calculator, salary management, pay slip PDF, payroll software free, salary calculator, employee payroll, wage slip generator',
+      title: 'Salary Slip Generator - StaffUnity',
+      description: 'Generate professional salary slips and calculate payroll with StaffUnity. Download salary slips as PDF. Free payroll management for small businesses.',
+      keywords: 'StaffUnity, salary slip generator, payroll calculator, salary management, pay slip PDF, payroll software free, salary calculator, employee payroll, wage slip generator',
       url: '/pages/salery'
     },
     'chat': {
-      title: 'Team Chat - Employee Communication Platform',
-      description: 'Real-time team communication with EmploySync Connect chat. Connect with employees, send instant messages, improve workplace communication.',
-      keywords: 'team chat, employee communication, workplace messaging, internal chat, team messaging app, employee chat software, office communication tool',
+      title: 'Team Chat & Video Meetings - StaffUnity',
+      description: 'Unified communication with StaffUnity. Real-time chat, video calls, and screen sharing. Connect with your team instantly.',
+      keywords: 'StaffUnity, team chat, video calling, screen sharing, online meetings, employee communication, workplace messaging, internal chat, video conference, office communication tool',
       url: '/pages/chat'
     },
     'login': {
-      title: 'Login - Employee Portal Access',
-      description: 'Login to EmploySync Connect employee portal. Access your attendance, leave requests, salary slips, and team chat. Secure employee login.',
-      keywords: 'employee portal login, HR system login, staff login, employee login page, workforce management login, EmploySync login',
+      title: 'Login - StaffUnity Portal',
+      description: 'Login to StaffUnity employee portal. Access your attendance, leave requests, salary slips, and team chat. Secure employee login.',
+      keywords: 'StaffUnity login, employee portal login, HR system login, staff login, employee login page, workforce management login',
       url: '/login'
     }
   };
@@ -138,9 +138,9 @@ export class SeoService {
    */
   setDefaultTags(): void {
     this.updateMetaTags({
-      title: 'Free Employee Management System & HR Software 2025',
-      description: 'EmploySync Connect - Free online employee management system for attendance tracking, leave management, salary slip generation & team chat. Best HR software for small businesses.',
-      keywords: 'employee management system, free HR software, attendance tracking software, leave management system, employee portal, EmploySync Connect, workforce management, salary slip generator, HR portal, team communication app, free employee management'
+      title: 'StaffUnity - Free Employee Management System with Video Calling 2025',
+      description: 'StaffUnity - Free all-in-one employee management. Features: Video Calling, Screen Sharing, Attendance, Leaves, Salary Slips & Chat. Best free HR software.',
+      keywords: 'StaffUnity, video calling app, screen sharing for business, employee management system, free HR software, attendance tracking, leave management, employee portal, team video chat, online meetings, free employee management'
     });
   }
 
