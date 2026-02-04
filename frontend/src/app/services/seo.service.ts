@@ -18,8 +18,8 @@ interface PageSeoConfig {
 })
 export class SeoService {
   private readonly siteName = 'StaffUnity';
-  private readonly defaultImage = 'https://StaffUnity.netlify.app/assets/StaffUnity.png';
-  private readonly baseUrl = 'https://StaffUnity.netlify.app';
+  private readonly defaultImage = 'https://staffunity.netlify.app/assets/StaffUnity.png';
+  private readonly baseUrl = 'https://staffunity.netlify.app';
 
   // Predefined SEO configurations for all pages
   private readonly pageConfigs: PageSeoConfig = {

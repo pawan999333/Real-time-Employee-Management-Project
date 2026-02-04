@@ -1,1 +1,5 @@
+# Domain Redirect (Only works if old domain is still pointing here)
+https://employ-sync-connect.netlify.app/* https://staffunity.netlify.app/:splat 301!
+
+# SPA Fallback
 /*    /index.html   200
