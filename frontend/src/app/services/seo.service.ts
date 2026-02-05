@@ -25,7 +25,7 @@ export class SeoService {
   private readonly pageConfigs: PageSeoConfig = {
     'dashboard': {
       title: 'Dashboard - StaffUnity',
-      description: 'Access your StaffUnity dashboard to manage attendance, track leaves, view department stats, and monitor workforce metrics. Free HR dashboard for businesses.',
+      description: 'Access your StaffUnity dashboard to manage attendance, leave requests, department stats, workforce metrics, and start video meetings. The all-in-one HR & Collaboration hub.',
       keywords: 'StaffUnity, employee dashboard, HR dashboard, attendance management, leave tracking, department overview, workforce analytics, free HR software dashboard',
       url: '/pages/dashboard'
     },
@@ -62,7 +62,7 @@ export class SeoService {
     'chat': {
       title: 'Team Chat & Video Meetings - StaffUnity',
       description: 'Unified communication with StaffUnity. Real-time chat, video calls, and screen sharing. Connect with your team instantly.',
-      keywords: 'StaffUnity, team chat, video calling, screen sharing, online meetings, employee communication, workplace messaging, internal chat, video conference, office communication tool',
+      keywords: 'StaffUnity, team chat, hd video calls, screen sharing, online meetings, employee communication, remote team collaboration, business messenger, video conferencing app',
       url: '/pages/chat'
     },
     'login': {
@@ -138,9 +138,9 @@ export class SeoService {
    */
   setDefaultTags(): void {
     this.updateMetaTags({
-      title: 'StaffUnity – Unified Digital Workspace for Modern Management',
-      description: 'StaffUnity unifies workforce management, real-time team conferencing, and collaborative chat into a single enterprise-ready ecosystem. Streamline your digital workspace today.',
-      keywords: 'StaffUnity, digital workspace, workforce collaboration, enterprise hub, integrated HR tools, video meetings, team chat, payroll automation'
+      title: 'StaffUnity - Free Employee Management, Attendance, Payroll & Video Calls',
+      description: 'StaffUnity is the ultimate free employee management system featuring attendance tracking, leave management, payroll, salary slips, real-time chat, HD video calls, and screen sharing. The all-in-one digital workspace for modern teams.',
+      keywords: 'StaffUnity, employee management system, attendance tracker, leave management, payroll software, salary slip generator, HR management system, free HR software, team collaboration platform, real-time chat, video conferencing, screen sharing, remote work tools'
     });
   }
 
