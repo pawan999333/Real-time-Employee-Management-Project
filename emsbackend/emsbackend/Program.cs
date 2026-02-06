@@ -48,6 +48,7 @@ namespace emsbackend
                 });
             });
             builder.Services.AddScoped<ITokenHandler, Repositories.TokenHandler>();
+            builder.Services.AddHttpClient<IRecaptchaService, RecaptchaService>();
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
