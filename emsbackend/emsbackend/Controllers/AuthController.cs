@@ -18,13 +18,11 @@ namespace emsbackend.Controllers
 
         private readonly string _connectionString;
         private readonly ITokenHandler tokenHandler;
-        private readonly IRecaptchaService recaptchaService;
 
-        public AuthController(IConfiguration configuration, ITokenHandler tokenHandler, IRecaptchaService recaptchaService)
+        public AuthController(IConfiguration configuration, ITokenHandler tokenHandler)
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection");
             this.tokenHandler = tokenHandler;
-            this.recaptchaService = recaptchaService;
 
         }
 
@@ -105,13 +103,7 @@ namespace emsbackend.Controllers
         {
             try
             {
-                // Verify Captcha
-                var isCaptchaValid = await recaptchaService.VerifyTokenAsync(dto.recaptcha);
-
-                if (!isCaptchaValid)
-                {
-                    return BadRequest(new { success = false, message = "Invalid reCAPTCHA. Please try again." });
-                }
+               
 
                 SqlConnection connection = new SqlConnection(_connectionString);
                 SqlCommand command = new SqlCommand

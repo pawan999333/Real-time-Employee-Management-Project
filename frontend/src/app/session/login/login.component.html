@@ -22,10 +22,12 @@
 
             <!-- <h4 class="text-right" style="color: #3f51b5; text-decoration: underline;font-weight: bold;"
                 (click)="addUser()">Create Account</h4> -->
-            <div class="col-12 px-0  captcha-container">
-                <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" formControlName="recaptcha">
+            <!-- <div class="captcha-full">
+                <ngx-recaptcha2 data-size="compact" #captchaElem [siteKey]="siteKey" formControlName="recaptcha">
                 </ngx-recaptcha2>
-            </div>
+            </div> -->
+
+
 
             <div class="d-flex pt-4">
                 <button mat-raised-button color="primary" type="submit" class="col mr-2">Login</button>

@@ -19,7 +19,6 @@ import { NgChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CustomInterceptor } from '../services/custom.interceptor';
-import { NgxCaptchaModule } from 'ngx-captcha';
 
 console.log("session module load")
 @NgModule({
@@ -42,7 +41,6 @@ console.log("session module load")
         MatNativeDateModule,
         NgChartsModule,
         MatTooltipModule,
-        NgxCaptchaModule
   ],
     providers: [{ provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true }],
   

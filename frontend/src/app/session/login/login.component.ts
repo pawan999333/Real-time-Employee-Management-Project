@@ -14,11 +14,10 @@ import { SeoService } from 'src/app/services/seo.service';
 })
 export class LoginComponent implements OnInit {
   baseUrl = environment.apiUrl;
-siteKey:string="6LdhqWIsAAAAAFqrvUxv6Digkcds94M5D5I4UqPg"
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required]),
     passwordHash: new FormControl('', [Validators.required]),
-    recaptcha: new FormControl('', [Validators.required])
+    // recaptcha: new FormControl('', [Validators.required])
   })
   constructor(private http: HttpClient, private toastr: ToastrService, private accService: AccountService,
     private router: Router, private seoService: SeoService
